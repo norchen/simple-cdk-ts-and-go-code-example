@@ -25,6 +25,11 @@ Executing go mod graph in /app
 ...
 ```
 
+## Deploy the Lambda function to AWS
+1. Build the go binaries: `GOOS=linux GOARCH=amd64 go build -o ./tmp/bootstrap ./src/main.go`
+2. [optional] Set up your AWS credential context (e.g. by using a certain profile, aws-vault, or other options)
+3. Run `npx cdk deploy` to deploy the stack.
+
 ## Credits
 The code example was taken from [The Simplest AWS Lambda in Golang by Connor the Wise](https://medium.com/full-stack-engineer/the-simplest-aws-lambda-in-golang-f4c52cb3e5d8).
 Thank you for providing!
